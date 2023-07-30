@@ -1,0 +1,94 @@
+1]Iterate json objects(for, for in, for of,for each)loops:
+var json = '{
+"name":"John", 
+"age":30, 
+"city":"New York"
+}'
+i)For each loop
+Object.entries(obj).forEach(([key, value]) => {
+  console.log(key + ': ' + value);
+});
+
+ii)For loop
+var obj=JSON.parse(json);
+var keys=Object.keys(obj);
+for(var i=0;i<keys.length;i++){
+   let x=keys[i];
+  console.log(x,obj[x]);
+}
+
+iii) For of
+var obj=JSON.parse(json);
+var entries = Object.entries(obj);
+for (var [key,value] of entries) {
+  console.log(key+":"+ value);
+}
+
+iv) For in
+var obj=JSON.parse(json);
+for(var key in obj)
+{
+console.log(key+":"+obj[key]);
+}
+
+--------------------------------------------------------------------------------
+
+2]create own resume in json format
+
+let Resume={
+    "info":{
+      "name": "Gokul",
+      "email": "gokul@gamil.com",
+      "degree": "B.E",
+      "location":{
+        "address": "Salem",
+        "postalCode": 600030,
+        "city": "salem",
+        "state": "Tamilnadu",
+        "country": "India"
+      },
+    },
+    "work": [
+      {
+        "company": "onward",
+        "position": "Software test engineer",
+      },
+    ],
+    "education": [
+      {
+        "institution": "KSR institute for engineering and technology",
+        "department": "Mechanical",
+        "studyType": "fulltime",
+        "batch start year": 2013,
+        "batch end year": 2017,
+        "gpa": 7.5,
+      }
+    ],
+    "skills": [
+      {
+        "name": "python,javascript",
+        "level": "beginer",
+        "project": [
+          "automatic attendance maintaing system using python language"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Tamil,Enlish",
+      }
+    ],
+    "interests": [
+      {
+        "name": "script writter,youtuber,",
+      }
+    ]
+  }
+------------------------------------------------------------------------------------------------------------------------------------------
+3]difference between window,screen and document.
+
+The window is the actual global object. 
+
+The screen is the screen, it contains properties about the user's display.
+
+The document is where the DOM is.
